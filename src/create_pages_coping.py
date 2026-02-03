@@ -5,6 +5,8 @@ df = pd.read_csv('src/coping_autism.csv')
 for _, row in df.iterrows():
   title = row['title']
   img = row['url']
+  text = row['selftext']
+  print(row.post_id,img)
   
 
 
@@ -27,6 +29,7 @@ for _, row in df.iterrows():
       <section class="main-content">
   <h2>{title}</h2>
   <p><img src="{img}" alt="Cayman Logo" class="logo"></p>
+  <p>{text}</p>
 
       </section>
 
